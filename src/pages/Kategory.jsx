@@ -1,14 +1,18 @@
-import "../styles/kategory.css";
-import "../styles/heroSection.css";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+import "../styles/kategory/kategory.css";
+import "../styles/home/heroSection.css";
+import Header from "../component/BaseComponent/Header";
+import Footer from "../component/BaseComponent/Footer";
+import Sidebar from "../component/BaseComponent/Sidebar";
 import VideoCard from "../data/VideoCard";
-import Filter from "../component/Filter";
+import Filter from "../component/Kategory/Filter";
+import { useState } from "react";
 
 function Kategory() {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Header />
+      <Header setIsOpen={setIsOpen} />
+      <Sidebar isOpen={isOpen} />
       <div className="kategory_wrapper">
         <Filter />
         <div className="video">

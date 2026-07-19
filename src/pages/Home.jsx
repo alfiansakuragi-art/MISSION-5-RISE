@@ -1,20 +1,17 @@
 import { useState } from "react";
-import Header from "../component/Header";
-import HeroSection from "../component/HeroSection";
-import Content from "../component/Content";
-import NewsLetter from "../component/NewsLetter";
-import Footer from "../component/Footer";
-import Sidebar from "../component/SIdebar";
-import "../styles/home.css";
+import Header from "../component/BaseComponent/Header";
+import HeroSection from "../component/Home/HeroSection";
+import Content from "../component/home/Content";
+import NewsLetter from "../component/Home/NewsLetter";
+import Footer from "../component/BaseComponent/Footer";
+import Sidebar from "../component/BaseComponent/Sidebar";
+import "../styles/home/home.css";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleSidebar = () => {
-    setIsOpen((prev) => !prev);
-  };
   return (
     <>
-      <Header toggleSidebar={toggleSidebar} />
+      <Header setIsOpen={setIsOpen} />
       <Sidebar isOpen={isOpen} />
       <div className="wrapper">
         <HeroSection />

@@ -1,4 +1,4 @@
-import "../styles/sidebar.css";
+import '../../styles/baseComponent/sidebar.css'
 import { useNavigate } from "react-router-dom";
 function Sidebar({isOpen}) {
   const navigate = useNavigate();

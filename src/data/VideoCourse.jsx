@@ -1,6 +1,6 @@
 import course2 from "../asset/produk2.png";
 import ava from "../asset/pic.png";
-const courses = [
+const CoursesData = [
   {
     id: 1,
     picture:
@@ -226,4 +226,4 @@ const courses = [
   },
 ];
 
-export default courses;
+export default CoursesData;

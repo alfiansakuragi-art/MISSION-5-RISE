@@ -1,18 +1,19 @@
-import Header from "../component/Header";
-import Courses from "../component/Courses";
-import Footer from "../component/Footer";
-import courses from "../data/videoCourse";
+import Header from "../component/BaseComponent/Header";
+import Courses from "../component/Course/Courses";
+import Footer from "../component/BaseComponent/Footer";
+import CoursesData from "../data/videoCourse";
+import Sidebar from "../component/BaseComponent/Sidebar";
 import { useParams } from "react-router-dom";
-
+import { useState } from "react";
 
 function Course(props) {
   const { id } = useParams();
-  const selectedCourse = courses.find((item) => item.id === Number(id));
-  console.log(selectedCourse)
-  console.log(id)
+  const selectedCourse = CoursesData.find((item) => item.id === Number(id));
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <Header />
+      <Header setIsOpen={setIsOpen} />
+      <Sidebar isOpen={isOpen} />
       <Courses
         coursesHead={selectedCourse.coursesData.coursesHead}
         coursesSubHead={selectedCourse.coursesData.coursesSubHead}
@@ -24,7 +25,7 @@ function Course(props) {
         courseTotal={selectedCourse.coursesData.courseTotal}
         intro={selectedCourse.coursesData.intro}
         tutorPic={selectedCourse.coursesData.tutor.pic}
-        tutorName={selectedCourse.coursesData.tutor.name}
+        tutorName={selectedCourse.author.name}
         tutorProfession={selectedCourse.coursesData.tutor.profession}
         tutorExp={selectedCourse.coursesData.tutor.exp}
         rate={selectedCourse.rate}

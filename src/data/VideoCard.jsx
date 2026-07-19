@@ -1,4 +1,4 @@
-import "../styles/videocard.css";
+import "../styles/home/videocard.css";
 import course1 from "./VideoCourse";
 import { useNavigate } from "react-router-dom";
 function VideoCard() {

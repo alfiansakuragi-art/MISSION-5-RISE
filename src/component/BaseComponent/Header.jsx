@@ -1,8 +1,11 @@
-import '../styles/header.css'
-import logo from '../asset/logo.png'
+import "../../styles/baseComponent/header.css"
+import logo from "../../asset/logo.png"
 import { useNavigate } from 'react-router-dom';
-function Header({toggleSidebar}) {
+function Header({setIsOpen}) {
   const navigate = useNavigate();
+    const toggleSidebar = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
     <header>
         <img src={logo} alt="" />

@@ -1,4 +1,4 @@
-import '../styles/heroSection.css'
+import '../../styles/home/heroSection.css'
 function HeroSection() {
   return (
     <div className="container">

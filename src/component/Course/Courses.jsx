@@ -1,4 +1,4 @@
-import '../styles/courses.css'
+import "../../styles/courses/courses.css"
 
 function Courses(props) {
   return (
@@ -73,14 +73,6 @@ function Courses(props) {
             <p>{props.tutorProfession}</p>
           </div>
           <p>{props.tutorExp}</p>
-        </div>
-        <div className="tutorCard">
-          <div className="tutorCardHead">
-            <img src={props.tutorPic2} alt={props.tutorName2} />
-            <p>{props.tutorName2}</p>
-            <p>{props.tutorProfession2}</p>
-          </div>
-          <p>{props.tutorExp2}</p>
         </div>
       </section>
       <section className="coursesVideo">

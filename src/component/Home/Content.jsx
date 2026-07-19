@@ -1,6 +1,6 @@
-import "../styles/content.css";
-import "../styles/videoCourse.css";
-import VideoCard from "../data/VideoCard";
+import "../../styles/home/content.css";
+import "../../styles/courses/videoCourse.css";
+import VideoCard from "../../data/VideoCard";
 function Content() {
   return (
     <div className="content">

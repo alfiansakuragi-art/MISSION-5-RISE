@@ -1,29 +1,13 @@
-
 .coursesWrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px;
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  grid-template-areas:
-    "head      head"
-    "action    action"
-    "tutor     side"
-    "video     side"
-    "rate      side";
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   font-family: 'Segoe UI', Roboto, sans-serif;
   color: #222;
 }
-
-
-.coursesHead      { grid-area: head; }
-.courseAction     { grid-area: action; }
-.coursesDeskriptionIntro { grid-area: desc; }
-.coursesTutor     { grid-area: tutor; }
-.coursesVideo     { grid-area: video; }
-.coursesRate      { grid-area: rate; }
-
 
 .coursesHead {
   position: relative;
@@ -34,8 +18,12 @@
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url("../asset/hero-bg.jpg") center/cover no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, .8),
+      rgba(0, 0, 0, .7)),
+    url('../asset/herosection.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .coursesHead h1 {
@@ -63,7 +51,7 @@
   border: 1px solid #eee;
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   height: fit-content;
 }
 
@@ -103,7 +91,7 @@
   border-radius: 6px;
 }
 
-.courseAction > p {
+.courseAction>p {
   color: #ff7a1f;
   font-size: 12px;
   margin: 0 0 16px;
@@ -163,7 +151,7 @@
   font-size: 15px;
 }
 
-.coursesActionBennefit > span {
+.coursesActionBennefit>span {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -171,7 +159,7 @@
   color: #555;
 }
 
-.coursesActionBennefit > span ion-icon {
+.coursesActionBennefit>span ion-icon {
   color: #3fae5a;
 }
 
@@ -204,7 +192,7 @@
   padding: 20px;
 }
 
-.coursesTutor > h1 {
+.coursesTutor>h1 {
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 16px;
@@ -214,7 +202,7 @@
   display: block;
 }
 
-.coursesTutor .tutorCard + .tutorCard {
+.coursesTutor .tutorCard+.tutorCard {
   margin-top: 12px;
 }
 
@@ -256,7 +244,7 @@
   margin: 2px 0 0;
 }
 
-.tutorCard > p {
+.tutorCard>p {
   font-size: 12.5px;
   color: #666;
   line-height: 1.6;
@@ -269,7 +257,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-.coursesTutor.grid2 > h1 { grid-column: 1 / -1; }
+
+.coursesTutor.grid2>h1 {
+  grid-column: 1 / -1;
+}
 
 
 .coursesVideo {
@@ -279,7 +270,7 @@
   padding: 20px;
 }
 
-.coursesVideo > h1 {
+.coursesVideo>h1 {
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 16px;
@@ -332,7 +323,7 @@
   color: #3fae5a;
 }
 
-.coursesVideoBox ul li > ion-icon[name="time-outline"] {
+.coursesVideoBox ul li>ion-icon[name="time-outline"] {
   color: #999;
   margin-left: 12px;
 }
@@ -345,7 +336,7 @@
   padding: 20px;
 }
 
-.coursesRate > h1 {
+.coursesRate>h1 {
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 16px;
@@ -355,7 +346,7 @@
   display: block;
 }
 
-.coursesRate .rater + .rater {
+.coursesRate .rater+.rater {
   margin-top: 12px;
 }
 
@@ -365,7 +356,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
-.coursesRate.grid2 > h1 { grid-column: 1 / -1; }
+
+.coursesRate.grid2>h1 {
+  grid-column: 1 / -1;
+}
 
 .rater {
   border: 1px solid #eee;
@@ -398,7 +392,7 @@
   margin: 2px 0 0;
 }
 
-.rater > p {
+.rater>p {
   grid-column: 2 / -1;
   font-size: 12px;
   color: #666;
@@ -406,13 +400,14 @@
   margin: 0;
 }
 
-.rater > span {
+.rater>span {
   grid-column: 2 / -1;
   color: #ffc542;
   font-size: 13px;
 }
 
 @media (max-width: 860px) {
+
   .coursesWrapper,
   .coursesWrapper.v2 {
     grid-template-columns: 1fr;
@@ -424,6 +419,7 @@
       "video"
       "rate";
   }
+
   .coursesTutor.grid2,
   .coursesRate.grid2 {
     grid-template-columns: 1fr;

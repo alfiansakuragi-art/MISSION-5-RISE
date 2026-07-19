@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/register.css";
+import "../../styles/Auth/register.css"
 import { useNavigate } from "react-router-dom";
 
 function Register() {
