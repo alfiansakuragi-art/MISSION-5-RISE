@@ -17,7 +17,7 @@ const CoursesData = [
     kategory: "pengembanganDiri",
     star: "⭐️⭐️⭐️",
     rate: "3.5 (86)",
-    price: "Rp 200K",
+    price: "Rp 400K",
     coursesData: {
       coursesHead: "Gapai Karier Impianmu sebagai Seorang Content Creator.",
       coursesSubHead:

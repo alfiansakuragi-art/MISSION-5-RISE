@@ -1,5 +1,4 @@
 .coursesWrapper {
-  max-width: 1100px;
   margin: 0 auto;
   padding: 24px;
   display: flex;
@@ -7,6 +6,18 @@
   gap: 24px;
   font-family: 'Segoe UI', Roboto, sans-serif;
   color: #222;
+}
+
+.coursesBox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 24px;
+  flex: 3;
+}
+
+.coursesDetail {
+  flex: 1;
 }
 
 .coursesHead {
@@ -406,22 +417,9 @@
   font-size: 13px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 480px) {
 
-  .coursesWrapper,
-  .coursesWrapper.v2 {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "head"
-      "action"
-      "desc"
-      "tutor"
-      "video"
-      "rate";
-  }
-
-  .coursesTutor.grid2,
-  .coursesRate.grid2 {
-    grid-template-columns: 1fr;
+  .coursesBox {
+    flex-direction: column;
   }
 }
