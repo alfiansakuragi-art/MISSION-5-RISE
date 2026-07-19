@@ -20,7 +20,7 @@
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, .8),
       rgba(0, 0, 0, .7)),
-    url('../asset/herosection.jpg');
+    url('../../asset/herosection.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
