@@ -4,11 +4,11 @@ function Sidebar({isOpen}) {
   const navigate = useNavigate();
   return (
     <div className={`sidebar ${isOpen ? "active" : ""}`}>
-      <a className="sidebar_beranda" href="/">
+      <a onClick={() => {navigate("/")}} className="sidebar_beranda" href="">
         Beranda
       </a>
       <hr className="sidebar_divider" />
-      <a className="sidebar_kategory" href="/kategory">
+      <a onClick={() => {navigate("/kategory")}} className="sidebar_kategory" href="">
         kategory
       </a>
       <hr className="sidebar_divider" />

@@ -50,20 +50,20 @@
 }
 
 .mentor__avatar {
-    width: 48px;
+    width: 40px;
     height: 48px;
     border-radius: 10px;
     object-fit: cover;
 }
 
 .mentor__name {
-    font-size: 1rem;
+    font-size: .6rem;
     font-weight: 600;
 }
 
 .mentor__job {
     color: #777;
-    font-size: .9rem;
+    font-size: .6rem;
     margin-top: 2px;
 }
 
@@ -75,18 +75,21 @@
 }
 
 .course-card__rating {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     color: #f5b301;
-    font-size: .95rem;
+    font-size: .9rem;
 }
 
 .course-card__rating span {
     color: #666;
-    margin-left: 6px;
+    margin-left: 10px;
 }
 
 .course-card__price {
     color: #00a63e;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
