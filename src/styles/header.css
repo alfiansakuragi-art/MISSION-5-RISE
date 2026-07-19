@@ -1,0 +1,86 @@
+@import url('../index.css');
+
+header {
+    width: 100%;
+    padding: 13px 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid #3A35411F;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 99;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--textD-secondary);
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    align-self: center;
+    margin-right: 40px;
+}
+
+nav button {
+    margin-left: 20px;
+    padding: 10px 26px 10px 26px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+nav button a {
+    text-decoration: none;
+    color: var(--textL-primary)
+}
+
+#login {
+    background-color: var(--bg-primary);
+    border: none;
+}
+
+#register {
+    background-color: #efefef;
+    border: 1px solid var(--bg-primary);
+}
+
+#register:hover {
+    background-color: #ffffffef;
+}
+
+#login:hover {
+    background-color: var(--succes-hover);
+}
+
+#register a {
+    color: var(--bg-primary);
+    text-decoration: none;
+}
+
+#login a {
+    text-decoration: none;
+}
+
+header>nav {
+    display: none;
+}
+
+header>span {
+    font-size: 2rem;
+    align-self: center;
+}
+
+@media (min-width:1200px) {
+    header>nav {
+        display: block;
+    }
+
+    header>span {
+        display: none;
+    }
+
+}

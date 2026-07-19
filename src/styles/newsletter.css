@@ -1,0 +1,97 @@
+@import url("../index.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.newsletter {
+    background-image: linear-gradient(rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .7)),
+        url('../asset/herosection.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 64px;
+    padding-right: 20px;
+    padding-bottom: 64px;
+    padding-left: 20px;
+    color: var(--textL-primary);
+    font-weight: bold;
+    gap: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.newsletter-form-container {
+    width: 100%;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 9px;
+}
+
+.newsletter-form-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+
+.newsletter-form-container button {
+    padding: 16px 20px;
+    width: auto;
+    border: 1px solid;
+    outline: none;
+    background-color: var(--bg-secondary);
+    color: var(--textL-primary);
+    margin: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.newsletter-form-container button:hover {
+    background-color: var(--textL-primary);
+    color: var(--bg-secondary);
+    border: 1px solid var(--bg-secondary);
+}
+
+
+.newsletter h1 {
+    font-family: "poppins", sans-serif;
+}
+
+.newsletter p {
+    letter-spacing: 0.2px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-family: "DM serif Display", sans-serif;
+}
+
+
+
+@media (min-width: 1200px) {
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 82px;
+        padding-right: 170px;
+        padding-bottom: 64px;
+        padding-left: 170px;
+    }
+
+    .newsletter h1 {
+        font-size: 48px;
+    }
+
+    .newsletter p {
+        font-size: 16px;
+    }
+
+    .newsletter-form-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+}

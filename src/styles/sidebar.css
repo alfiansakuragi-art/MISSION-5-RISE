@@ -1,0 +1,51 @@
+@import url('../index.css');
+
+.sidebar {
+    width: 100%;
+    height: auto;
+    display: none;
+    background-color: #ffffff;
+    padding: 12px;
+    position: fixed;
+    z-index: 100;
+}
+
+.sidebar.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar_beranda {
+    color: var(--bg-primary);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+}
+.sidebar_kategory {
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    color: var(--textD-secondary);
+}
+#sidebarLogin {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-primary);
+    color: var(--textL-primary);
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#sidebarRegister {
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid var(--bg-primary);
+    outline: none;
+    background-color: var(--textL-primary);
+    color: var(--bg-primary);
+}

@@ -1,0 +1,10 @@
+.kategory_wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 480px) {
+    .kategory_wrapper {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,153 @@
+.footer {
+    width: 100%;
+    padding: 48px 60px 24px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* ==== Brand Section ==== */
+.footer_brand {
+    max-width: 380px;
+}
+
+.footer_logo {
+    height: 60px;
+    margin-bottom: 16px;
+}
+
+.footer_deskription {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.footer_adress {
+    font-style: normal;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+.footer_adress p {
+    margin: 0;
+}
+
+/* ==== Menu Section ==== */
+.footer_menu {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer_column h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.footer_column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer_column ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.footer_column ul li a:hover {
+    color: #f97316;
+}
+
+/* ==== Divider ==== */
+.footer_divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 32px 0 20px;
+}
+
+/* ==== Bottom Section ==== */
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer_copyright {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.footer_social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer_social span {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    position: relative;
+}
+
+.footer_social span ion-icon {
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+.footer_social span:hover {
+    background-color: #1a1a1a;
+}
+
+.footer_social span:hover ion-icon {
+    color: #ffffff;
+}
+
+.footer_social span a {
+    position: absolute;
+    inset: 0;
+}
+
+
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .footer_menu {
+        gap: 40px;
+    }
+
+    .footer_bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer_logo {
+        height: 40px;
+    }
+}

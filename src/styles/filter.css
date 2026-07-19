@@ -1,0 +1,142 @@
+.filter {
+    width: 260px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    border: 1px solid #3A35411F;
+    padding: 10px;
+    border-radius: 7px;
+    margin-left: 30px;
+}
+
+.filter_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.filter_head h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.filter_head button {
+    background: none;
+    border: none;
+    color: #ff5a1f;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter_card {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.filter_card>span:not(.filter_icon) {
+    color: #3fae5a;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+.filter_icon {
+    color: #3fae5a;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.filter_card::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #3fae5a;
+    border-bottom: 2px solid #3fae5a;
+    transform: rotate(-135deg);
+}
+
+.filter_card ul {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+.filter_card ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+    padding: 6px 0;
+}
+
+
+.filter_card input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #cfe8d6;
+    border-radius: 4px;
+    background-color: #eaf7ee;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.filter_card input[type="checkbox"]:checked {
+    background-color: #3fae5a;
+    border-color: #3fae5a;
+}
+
+.filter_card input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.filter_card.durasi input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #3fae5a;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.filter_card.durasi input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3fae5a;
+}
+
+
+@media (max-width: 480px) {
+    .filter_card {
+        padding-right: 10px;
+    }
+}
