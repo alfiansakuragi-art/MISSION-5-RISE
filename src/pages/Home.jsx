@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../component/BaseComponent/Header";
 import HeroSection from "../component/Home/HeroSection";
-import Content from "../component/home/Content";
+import Content from "../component/Home/Content";
 import NewsLetter from "../component/Home/NewsLetter";
 import Footer from "../component/BaseComponent/Footer";
 import Sidebar from "../component/BaseComponent/Sidebar";
