@@ -1,9 +1,15 @@
 import React from "react";
-import "../../styles/Auth/register.css"
+import "../../styles/Auth/register.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Register() {
   const navigate = useNavigate();
+  const [hide, setHide] = useState(true);
+
+  const hideToggle = () => {
+    setHide((prev) => !prev);
+  };
   return (
     <div className="register">
       <div className="register_card">
@@ -29,7 +35,7 @@ function Register() {
           </select>
         </div>
         <div className="register_form">
-            <label htmlFor="">Nomor telepon</label>
+          <label htmlFor="">Nomor telepon</label>
           <div id="tel">
             <select name="number" id="number">
               <option value="indonesia">Indonesia 🇮🇩</option>
@@ -40,22 +46,29 @@ function Register() {
         </div>
         <div className="register_form">
           <label htmlFor="">Kata-sandi</label>
-          <input type="password" required />
-          <span>
+          <input type={hide ? "password" : "text"} required />
+          <span onClick={hideToggle}>
             <ion-icon name="eye-off-outline"></ion-icon>
           </span>
         </div>
         <div className="register_form">
           <label htmlFor="">konfirmasi kata sandi</label>
-          <input type="password" required />
-          <span>
+          <input type={hide ? "password" : "text"} required />
+          <span onClick={hideToggle}>
             <ion-icon name="eye-off-outline"></ion-icon>
           </span>
         </div>
         <a href="">Lupa password?</a>
         <div className="register_action">
           <button className="login_masuk_btn">Daftar</button>
-          <button onClick={() => {navigate("/auth?mode=login")}} className="login_daftar_btn">Masuk</button>
+          <button
+            onClick={() => {
+              navigate("/auth?mode=login");
+            }}
+            className="login_daftar_btn"
+          >
+            Masuk
+          </button>
           <p>atau</p>
           <div className="google">
             <span className="register_google_icon">

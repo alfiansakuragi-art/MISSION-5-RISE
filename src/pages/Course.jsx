@@ -19,14 +19,14 @@ function Course(props) {
         coursesHead={selectedCourse.coursesData.coursesHead}
         coursesSubHead={selectedCourse.coursesData.coursesSubHead}
         courseRate={selectedCourse.coursesData.courseRate}
-        coursesPrice={selectedCourse.price}
+        coursesPrice={selectedCourse.coursesData.pricing.specialPrice}
         coursesBeforeDisc={selectedCourse.coursesData.pricing.Price}
         coursesDisc={selectedCourse.coursesData.pricing.discount}
         offeringLimit={selectedCourse.coursesData.pricing.limitDisc}
         courseTotal={selectedCourse.coursesData.courseTotal}
         intro={selectedCourse.coursesData.intro}
         tutorPic={selectedCourse.coursesData.tutor.Pic}
-        tutorName={selectedCourse.author.Name}
+        tutorName={selectedCourse.author.name}
         tutorProfession={selectedCourse.coursesData.tutor.Profession}
         tutorExp={selectedCourse.coursesData.tutor.Exp}
         rate={selectedCourse.rate}

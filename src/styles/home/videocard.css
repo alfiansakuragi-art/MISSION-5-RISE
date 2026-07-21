@@ -76,7 +76,6 @@
 
 .course-card__rating {
     display: flex;
-    flex-direction: column;
     width: 100%;
     color: #f5b301;
     font-size: .9rem;
@@ -91,6 +90,14 @@
     color: #00a63e;
     font-size: 1rem;
     font-weight: bold;
+}
+
+
+@media (min-width:572px ) {
+    .course-card__description {
+        display: block;
+    }
+
 }
 
 @media (min-width: 1200px) {

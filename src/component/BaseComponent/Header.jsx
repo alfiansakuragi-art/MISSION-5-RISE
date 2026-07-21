@@ -13,7 +13,7 @@ function Header({setIsOpen}) {
             <a onClick={() => {navigate("/")}} href="">Home</a>
             <a onClick={() => {navigate("/kategory")}} href="">Kategory</a>
             <button onClick={() => {navigate("/auth?mode=login")}} id="login"><a>Login</a></button>
-            <button onClick={() => {navigate("/auth?mode=register")}} id="register"><a href="#">Register</a></button>
+            <button onClick={() => {navigate("/auth?mode=register")}} id="register"><a href="">Register</a></button>
         </nav>
         <span id='sidebar' onClick={toggleSidebar}><ion-icon name="menu-outline"></ion-icon></span>
     </header>

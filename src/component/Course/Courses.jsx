@@ -1,5 +1,5 @@
 import "../../styles/courses/courses.css";
-
+import ava from '../../asset/Avatar.png'
 function Courses(props) {
   return (
     <div className="coursesWrapper">
@@ -196,7 +196,7 @@ function Courses(props) {
           <section className="coursesRate">
             <h1>Rating dan Review</h1>
             <div className="rater">
-              <img src={props.tutorPic} alt="ava" />
+              <img src={ava} alt="ava" />
               <div className="raterProfil">
                 <h3>Gregorius Edrik Lawanto</h3>
                 <p>Alumni Batch 2</p>

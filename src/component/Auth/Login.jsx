@@ -1,7 +1,13 @@
-import '../../styles/Auth/login.css'
-import { useNavigate } from 'react-router-dom';
+import "../../styles/Auth/login.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 function Login() {
   const navigate = useNavigate();
+  const [hide, setHide] = useState(true);
+
+  const hideToggle = () => {
+    setHide((prev) => !prev);
+  };
   return (
     <div className="login">
       <div className="login_card">
@@ -15,15 +21,22 @@ function Login() {
         </div>
         <div className="login_form">
           <label htmlFor="">Password</label>
-          <input type="password" required />
-          <span>
+          <input type={hide ? "password" : "text"} required />
+          <span onClick={hideToggle}>
             <ion-icon name="eye-off-outline"></ion-icon>
           </span>
         </div>
         <a href="">Lupa password?</a>
         <div className="login_action">
           <button className="login_masuk_btn">Masuk</button>
-          <button onClick={() => {navigate("/auth?mode=register")}} className="login_daftar_btn">Daftar</button>
+          <button
+            onClick={() => {
+              navigate("/auth?mode=register");
+            }}
+            className="login_daftar_btn"
+          >
+            Daftar
+          </button>
           <p>atau</p>
           <div className="google">
             <span className="login_google_icon">
