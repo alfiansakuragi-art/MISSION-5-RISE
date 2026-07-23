@@ -1,6 +1,8 @@
 import "../../styles/courses/courses.css";
 import ava from '../../asset/Avatar.png'
+import { useNavigate } from "react-router-dom";
 function Courses(props) {
+  const navigate = useNavigate()
   return (
     <div className="coursesWrapper">
       <section className="coursesHead">
@@ -18,7 +20,7 @@ function Courses(props) {
           </div>
           <p>penawaran tersisa: {props.offeringLimit}</p>
           <div className="coursesActionBtn">
-            <button>Beli Sekarang</button>
+            <button onClick={() => {navigate(props.url)}}>Beli Sekarang</button>
             <button>Bagikan Kelas</button>
           </div>
           <div className="coursesActionBennefit">

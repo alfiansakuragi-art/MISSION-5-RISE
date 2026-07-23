@@ -10,7 +10,7 @@ function Course(props) {
   const { id } = useParams();
   const selectedCourse = CoursesData.find((item) => item.id === Number(id));
   const [isOpen, setIsOpen] = useState(false);
-  console.log(selectedCourse.coursesData.tutor)
+  console.log(selectedCourse.id)
   return (
     <div>
       <Header setIsOpen={setIsOpen} />
@@ -30,6 +30,7 @@ function Course(props) {
         tutorProfession={selectedCourse.coursesData.tutor.Profession}
         tutorExp={selectedCourse.coursesData.tutor.Exp}
         rate={selectedCourse.rate}
+        url={`/course/${selectedCourse.id}/payment`}
       />
       <Footer />
     </div>

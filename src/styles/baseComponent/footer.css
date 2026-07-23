@@ -5,6 +5,7 @@
     background-color: #ffffff;
 }
 
+
 .footer_container {
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,6 @@
     gap: 40px;
 }
 
-/* ==== Brand Section ==== */
 .footer_brand {
     max-width: 380px;
 }
@@ -41,11 +41,9 @@
     margin: 0;
 }
 
-/* ==== Menu Section ==== */
 .footer_menu {
     display: flex;
     gap: 80px;
-    flex-wrap: wrap;
 }
 
 .footer_column h3 {
@@ -75,7 +73,6 @@
     color: #f97316;
 }
 
-/* ==== Divider ==== */
 .footer_divider {
     border: none;
     border-top: 1px solid #e5e7eb;
@@ -133,6 +130,17 @@
     inset: 0;
 }
 
+.footerArrow {
+    display: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.footer_hide {
+    display: none !important;
+}
+
+
 
 @media (max-width: 768px) {
     .footer_container {
@@ -141,13 +149,27 @@
 
     .footer_menu {
         gap: 40px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer_column {
+        justify-content: start;
+        border-bottom: 1px solid;
+        padding: 10px 0;
     }
 
     .footer_bottom {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .footer_logo {
         height: 40px;
+    }
+    .footerArrow {
+        display: inline;
+        margin-left: 10px;
+        font-size: 1.2rem;
     }
 }

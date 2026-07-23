@@ -1,5 +1,5 @@
-import "../styles/home/videocard.css";
-import course1 from "./VideoCourse";
+import "../../styles/home/videocard.css"
+import course1 from "../../data/VideoCourse";
 import { useNavigate } from "react-router-dom";
 function VideoCard() {
   const navigate = useNavigate();

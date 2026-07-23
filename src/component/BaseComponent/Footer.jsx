@@ -1,6 +1,20 @@
 import "../../styles/baseComponent/footer.css";
-import logo from "../../asset/logo.png"
+import logo from "../../asset/logo.png";
+import { useState } from "react";
 function Footer() {
+  const [openFilter, setOpenFilter] = useState({
+    isKategory: true,
+    isCompany: true,
+    isComunity: true,
+  });
+
+  const filterToggle = (key) => {
+    setOpenFilter((prev) => ({
+      ...openFilter,
+      [key]: !prev[key],
+    }));
+  };
+
   return (
     <footer className="footer">
       <div className="footer_container">
@@ -16,8 +30,13 @@ function Footer() {
         </section>
         <nav className="footer_menu">
           <div className="footer_column">
-            <h3>Kategori</h3>
-            <ul>
+            <h3>
+              Kategori
+              <span onClick={() => {filterToggle("isKategory")}} className="footerArrow">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </span>
+            </h3>
+            <ul className={openFilter.isKategory ? "" : "footer_hide"}>
               <li>
                 <a href="">Digital & Teknologi</a>
               </li>
@@ -36,8 +55,13 @@ function Footer() {
             </ul>
           </div>
           <div className="footer_column">
-            <h3>Perusahaan</h3>
-            <ul>
+            <h3>
+              Perusahaan
+              <span onClick={() => {filterToggle("isCompany")}} className="footerArrow">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </span>
+            </h3>
+            <ul className={openFilter.isCompany ? "" : "footer_hide"}>
               <li>
                 <a href="">Tentang Kami</a>
               </li>
@@ -56,8 +80,13 @@ function Footer() {
             </ul>
           </div>
           <div className="footer_column">
-            <h3>Komunitas</h3>
-            <ul>
+            <h3>
+              Komunitas{" "}
+              <span onClick={() => {filterToggle("isComunity")}} className="footerArrow">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </span>
+            </h3>
+            <ul className={openFilter.isComunity ? "" : "footer_hide"}>
               <li>
                 <a href="">Tips Sukses</a>
               </li>

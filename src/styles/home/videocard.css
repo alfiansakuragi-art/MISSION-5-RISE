@@ -16,8 +16,8 @@
 }
 
 .course-card__thumbnail {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;

@@ -3,7 +3,7 @@ import "../styles/home/heroSection.css";
 import Header from "../component/BaseComponent/Header";
 import Footer from "../component/BaseComponent/Footer";
 import Sidebar from "../component/BaseComponent/Sidebar";
-import VideoCard from "../data/VideoCard";
+import VideoCard from "../component/Course/VideoCard";
 import Filter from "../component/Kategory/Filter";
 import { useState } from "react";
 
